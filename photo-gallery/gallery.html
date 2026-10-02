@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ギャラリー | ゆったまりギャラリー</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+<div class="site-logo">
+  <img src="images/logo.png" alt="SPAWORLD HOTEL & RESORT">
+</div>
+
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="gallery.html">GALLERY</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="gallery-page">
+
+    <section class="gallery-title">
+      <p>PHOTO COLLECTION</p>
+      <h2>Gallery</h2>
+    </section>
+
+    <div class="category-buttons">
+      <button data-category="all">ALL</button>
+      <button data-category="landscape">風景</button>
+      <button data-category="city">街</button>
+      <button data-category="other">その他</button>
+    </div>
+
+    <section id="gallery" class="gallery-grid"></section>
+
+  </main>
+
+  <div id="modal" class="modal">
+    <button id="modal-close" class="modal-close">×</button>
+
+    <div class="modal-content">
+      <img id="modal-image" src="" alt="">
+
+      <div class="modal-text">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Photo Gallery</p>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+
+</body>
+</html>
