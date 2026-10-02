@@ -597,49 +597,53 @@ footer {
 
   /* メイン画像エリア */
 
-  .hero {
-    min-height: 58vh;
-    padding: 20px 10px;
+ 
+
+    .hero {
+    min-height: 50vh;
+    padding: 14px 8px;
   }
 
   .hero-content {
-    width: 92%;
-    max-width: 360px;
+    width: 88%;
+    max-width: 320px;
 
-    padding: 14px 14px 16px;
+    padding: 10px 12px 12px;
 
-    transform: translateY(-70px);
+    transform: translateY(-55px);
 
-    border-width: 4px;
-    border-radius: 14px;
+    border-width: 3px;
+    border-radius: 12px;
   }
 
   .hero-subtitle {
-    font-size: 8px;
-    letter-spacing: 1.5px;
+    font-size: 7px;
+    letter-spacing: 1px;
   }
 
   .hero h2 {
-    margin: 7px 0 6px;
+    margin: 5px 0 4px;
 
-    font-size: 27px;
-    line-height: 1.15;
+    font-size: 22px;
+    line-height: 1.1;
   }
 
   .hero p {
-    margin: 5px 0 0;
+    margin: 4px 0 0;
 
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 9px;
+    line-height: 1.4;
   }
 
   .main-button {
-    margin-top: 10px;
+    margin-top: 8px;
 
-    padding: 8px 16px;
+    padding: 7px 13px;
 
-    font-size: 11px;
+    font-size: 9px;
   }
+
+}
 
 
   /* 下の説明部分 */
