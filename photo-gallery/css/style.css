@@ -576,93 +576,128 @@ footer {
 @media (max-width: 600px) {
 
   .header-inner {
-    flex-direction: column;
-
-    gap: 14px;
-
-    padding: 15px;
+    padding: 10px 12px;
+    flex-direction: row;
+    gap: 8px;
   }
 
-  .logo {
-    font-size: 21px;
+  .site-logo img {
+    width: 160px;   /* ロゴは今のまま */
   }
 
   nav {
-    gap: 20px;
+    gap: 12px;
   }
+
+  nav a {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+
+  /* メイン画像エリア */
 
   .hero {
-    min-height: 67vh;
-
-    padding: 30px 14px;
-  }
-
-  .hero-photo {
-    background-position: center center;
+    min-height: 58vh;
+    padding: 20px 10px;
   }
 
   .hero-content {
-    width: 94%;
+    width: 92%;
+    max-width: 360px;
 
-    max-width: 430px;
+    padding: 14px 14px 16px;
 
-    padding: 18px 18px 20px;
+    transform: translateY(-70px);
 
-    transform: translateY(-90px);
-
-    border-radius: 12px;
+    border-width: 4px;
+    border-radius: 14px;
   }
 
   .hero-subtitle {
-    font-size: 9px;
-
-    letter-spacing: 2px;
+    font-size: 8px;
+    letter-spacing: 1.5px;
   }
 
   .hero h2 {
-    margin: 9px 0 7px;
+    margin: 7px 0 6px;
 
-    font-size: 30px;
+    font-size: 27px;
+    line-height: 1.15;
   }
 
   .hero p {
-    font-size: 13px;
+    margin: 5px 0 0;
+
+    font-size: 11px;
+    line-height: 1.5;
   }
 
   .main-button {
-    margin-top: 14px;
+    margin-top: 10px;
 
-    padding: 10px 20px;
+    padding: 8px 16px;
 
-    font-size: 13px;
+    font-size: 11px;
   }
 
+
+  /* 下の説明部分 */
+
+  .intro {
+    padding: 45px 16px;
+  }
+
+  .intro h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .intro p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+
+  /* ギャラリー */
+
   .gallery-page {
-    padding: 52px 16px;
+    padding: 40px 14px;
   }
 
   .gallery-title h2 {
-    font-size: 38px;
+    font-size: 30px;
+  }
+
+  .gallery-title p {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .category-buttons {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .category-buttons button {
+    padding: 8px 13px;
+    font-size: 11px;
   }
 
   .gallery-grid {
     grid-template-columns: 1fr;
-
-    gap: 20px;
+    gap: 16px;
   }
 
-  .modal {
-    padding: 15px;
+  .photo-info {
+    padding: 14px;
   }
 
-  .modal-content img {
-    max-width: 100%;
-
-    max-height: 72vh;
+  .photo-info h3 {
+    font-size: 16px;
   }
 
+  .photo-info p {
+    font-size: 12px;
+  }
 }
-
-  .site-logo img {
-    width: 160px;
-  }
