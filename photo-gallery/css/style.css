@@ -1,3 +1,7 @@
+/* =========================================================
+   基本設定
+========================================================= */
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +16,10 @@
   --gold: #e3b75d;
   --soft-bg: #f4fbfe;
   --text: #23495f;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -37,13 +45,14 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 .site-header {
   position: sticky;
   top: 0;
+
   z-index: 100;
 
   background: rgba(255, 255, 255, 0.96);
@@ -58,69 +67,109 @@ body {
 
 .header-inner {
   width: 100%;
-  max-width: none;
+
   margin: 0;
 
-  padding: 18px 28px 18px 14px;
+  padding: 14px 28px 14px 14px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  gap: 20px;
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .site-logo {
   display: flex;
   align-items: center;
+
+  flex-shrink: 0;
 }
 
 .site-logo img {
   width: 250px;
   height: auto;
+
   display: block;
 }
 
-nav a {
-  position: relative;
 
-  color: var(--deep-blue);
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+nav a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 92px;
+
+  padding: 9px 18px;
+
+  color: #1475a3;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #eef9ff
+    );
+
+  border: 2px solid #69c6ee;
+
+  border-radius: 999px;
 
   text-decoration: none;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 
   letter-spacing: 1px;
 
-  transition: 0.2s;
-}
+  box-shadow:
+    0 3px 9px rgba(0, 110, 170, 0.08);
 
-nav a::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-
-  width: 0;
-  height: 2px;
-
-  background: var(--blue);
-
-  transition: 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 nav a:hover {
-  color: var(--blue);
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #62c7ef,
+      #249bd1
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 16px rgba(0, 120, 180, 0.20);
 }
 
-nav a:hover::after {
-  width: 100%;
-}
 
-
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
   position: relative;
@@ -138,6 +187,9 @@ nav a:hover::after {
   overflow: hidden;
 }
 
+
+/* 背景画像 */
+
 .hero-photo {
   background:
     url("../images/yuttamari-main.jpg")
@@ -145,8 +197,12 @@ nav a:hover::after {
     no-repeat;
 }
 
+
+/* 背景画像に薄く色を重ねる */
+
 .hero-overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -157,12 +213,16 @@ nav a:hover::after {
     );
 }
 
+
+/* 中央タイトルカード */
+
 .hero-content {
   position: relative;
+
   z-index: 2;
 
-  max-width: 620px;
   width: 90%;
+  max-width: 620px;
 
   padding: 35px 28px 22px;
 
@@ -178,6 +238,7 @@ nav a:hover::after {
     no-repeat;
 
   border: 6px solid #69c6ee;
+
   border-radius: 18px;
 
   box-shadow:
@@ -186,28 +247,37 @@ nav a:hover::after {
   transform: translateY(-158px);
 }
 
+
+/* 小さい英字 */
+
 .hero-subtitle {
   margin: 0;
+
+  color: #58a873;
 
   font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 3px;
-
-  color: #58a873;
 }
+
+
+/* ゆったまりギャラリー */
 
 .hero h2 {
   margin: 10px 0 8px;
+
+  color: #1475a3;
 
   font-size: clamp(32px, 4.5vw, 52px);
 
   line-height: 1.15;
 
-  color: #1475a3;
-
   text-shadow: none;
 }
+
+
+/* 説明文 */
 
 .hero p {
   margin: 7px 0 0;
@@ -217,14 +287,22 @@ nav a:hover::after {
   font-size: 18px;
   font-weight: 500;
 
+  line-height: 1.6;
+
   text-shadow: none;
 }
+
+
+/* ギャラリーを見る */
 
 .main-button {
   display: inline-block;
 
   margin-top: 16px;
+
   padding: 11px 24px;
+
+  color: white;
 
   background:
     linear-gradient(
@@ -232,8 +310,6 @@ nav a:hover::after {
       #18b6e8,
       #0079bb
     );
-
-  color: white;
 
   text-decoration: none;
 
@@ -254,13 +330,13 @@ nav a:hover::after {
   transform: translateY(-2px);
 
   box-shadow:
-    0 10px 24px rgba(0, 125, 180, 0.3);
+    0 10px 24px rgba(0, 125, 180, 0.30);
 }
 
 
-/* =========================
+/* =========================================================
    INTRO
-========================= */
+========================================================= */
 
 .intro {
   padding: 90px 20px;
@@ -275,6 +351,8 @@ nav a:hover::after {
 
   color: var(--deep-blue);
 
+  font-size: 28px;
+
   letter-spacing: 4px;
 }
 
@@ -283,15 +361,18 @@ nav a:hover::after {
 
   color: #648394;
 
+  font-size: 16px;
+
   line-height: 1.9;
 }
 
 
-/* =========================
+/* =========================================================
    GALLERY PAGE
-========================= */
+========================================================= */
 
 .gallery-page {
+  width: 100%;
   max-width: 1200px;
 
   margin: auto;
@@ -300,34 +381,34 @@ nav a:hover::after {
 }
 
 .gallery-title {
-  text-align: center;
-
   margin-bottom: 42px;
+
+  text-align: center;
 }
 
 .gallery-title p {
   margin: 0;
 
+  color: var(--blue);
+
   font-size: 12px;
   font-weight: 700;
 
   letter-spacing: 4px;
-
-  color: var(--blue);
 }
 
 .gallery-title h2 {
   margin: 12px 0 0;
 
-  font-size: 48px;
-
   color: var(--deep-blue);
+
+  font-size: 48px;
 }
 
 
-/* =========================
+/* =========================================================
    CATEGORY BUTTONS
-========================= */
+========================================================= */
 
 .category-buttons {
   display: flex;
@@ -342,11 +423,11 @@ nav a:hover::after {
 .category-buttons button {
   padding: 11px 22px;
 
-  border: 2px solid var(--light-blue);
+  color: var(--deep-blue);
 
   background: white;
 
-  color: var(--deep-blue);
+  border: 2px solid var(--light-blue);
 
   border-radius: 999px;
 
@@ -355,23 +436,27 @@ nav a:hover::after {
 
   cursor: pointer;
 
-  transition: all 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    border-color 0.2s;
 }
 
 .category-buttons button:hover {
+  color: white;
+
   background: var(--blue);
 
   border-color: var(--blue);
-
-  color: white;
 
   transform: translateY(-2px);
 }
 
 
-/* =========================
+/* =========================================================
    PHOTO GRID
-========================= */
+========================================================= */
 
 .gallery-grid {
   display: grid;
@@ -415,7 +500,8 @@ nav a:hover::after {
 
   display: block;
 
-  transition: transform 0.35s;
+  transition:
+    transform 0.35s;
 }
 
 .photo-card:hover img {
@@ -443,26 +529,25 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    MODAL
-========================= */
+========================================================= */
 
 .modal {
   position: fixed;
 
   inset: 0;
 
-  background:
-    rgba(4, 36, 54, 0.94);
+  z-index: 1000;
 
   display: none;
-
   justify-content: center;
   align-items: center;
 
-  z-index: 1000;
-
   padding: 40px;
+
+  background:
+    rgba(4, 36, 54, 0.94);
 }
 
 .modal.show {
@@ -470,12 +555,13 @@ nav a:hover::after {
 }
 
 .modal-content {
+  width: auto;
+
   max-width: 1400px;
   max-height: 95vh;
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
 
@@ -515,11 +601,13 @@ nav a:hover::after {
   top: 20px;
   right: 30px;
 
+  padding: 0;
+
+  color: white;
+
   background: none;
 
   border: 0;
-
-  color: white;
 
   font-size: 44px;
 
@@ -527,14 +615,14 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
   padding: 34px 20px;
 
-  text-align: center;
+  color: white;
 
   background:
     linear-gradient(
@@ -543,22 +631,42 @@ footer {
       #008ecf
     );
 
-  color: white;
+  text-align: center;
 
   font-size: 13px;
 }
 
+footer p {
+  margin: 0;
+}
 
-/* =========================
+
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
-  .hero-content {
-    transform: translateY(-120px);
+  .site-logo img {
+    width: 210px;
+  }
 
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    min-width: 82px;
+
+    padding: 8px 14px;
+
+    font-size: 12px;
+  }
+
+  .hero-content {
     max-width: 560px;
+
+    transform: translateY(-120px);
   }
 
   .gallery-grid {
@@ -569,104 +677,147 @@ footer {
 }
 
 
-/* =========================
+/* =========================================================
    SMARTPHONE
-========================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
+  /* -------------------------
+     HEADER
+  ------------------------- */
+
   .header-inner {
-    padding: 10px 12px;
+    padding: 9px 10px;
+
     flex-direction: row;
-    gap: 8px;
+
+    gap: 6px;
   }
+
+
+  /* ロゴ */
 
   .site-logo img {
-    width: 160px;   /* ロゴは今のまま */
+    width: 160px;
   }
 
+
+  /* HOME / GALLERY */
+
   nav {
-    gap: 12px;
+    gap: 7px;
+
+    flex-shrink: 0;
   }
 
   nav a {
-    font-size: 11px;
-    letter-spacing: 0.5px;
+    min-width: auto;
+
+    padding: 5px 8px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.2px;
+
+    border-width: 1.5px;
+
+    box-shadow:
+      0 2px 6px rgba(0, 110, 170, 0.08);
   }
 
 
-  /* メイン画像エリア */
+  /* -------------------------
+     HERO
+  ------------------------- */
 
- 
-
-    .hero {
+  .hero {
     min-height: 50vh;
+
     padding: 14px 8px;
+  }
+
+  .hero-photo {
+    background-position: center center;
   }
 
   .hero-content {
     width: 88%;
-    max-width: 320px;
+    max-width: 300px;
 
-    padding: 10px 12px 12px;
-
-    transform: translateY(-55px);
+    padding: 9px 10px 10px;
 
     border-width: 3px;
-    border-radius: 12px;
+
+    border-radius: 11px;
+
+    transform: translateY(-55px);
   }
 
   .hero-subtitle {
-    font-size: 7px;
-    letter-spacing: 1px;
+    font-size: 6px;
+
+    letter-spacing: 0.8px;
   }
 
   .hero h2 {
-    margin: 5px 0 4px;
+    margin: 4px 0 3px;
 
-    font-size: 22px;
+    font-size: 19px;
+
     line-height: 1.1;
   }
 
   .hero p {
-    margin: 4px 0 0;
+    margin: 3px 0 0;
 
-    font-size: 9px;
+    font-size: 8px;
+
     line-height: 1.4;
   }
 
   .main-button {
-    margin-top: 8px;
+    margin-top: 7px;
 
-    padding: 7px 13px;
+    padding: 6px 11px;
 
-    font-size: 9px;
+    font-size: 8px;
   }
 
-}
 
-
-  /* 下の説明部分 */
+  /* -------------------------
+     INTRO
+  ------------------------- */
 
   .intro {
-    padding: 45px 16px;
+    padding: 42px 16px;
   }
 
   .intro h2 {
-    font-size: 20px;
+    margin-bottom: 10px;
+
+    font-size: 19px;
+
     letter-spacing: 2px;
   }
 
   .intro p {
     font-size: 12px;
+
     line-height: 1.7;
   }
 
 
-  /* ギャラリー */
+  /* -------------------------
+     GALLERY
+  ------------------------- */
 
   .gallery-page {
     padding: 40px 14px;
+  }
+
+  .gallery-title {
+    margin-bottom: 30px;
   }
 
   .gallery-title h2 {
@@ -675,22 +826,36 @@ footer {
 
   .gallery-title p {
     font-size: 9px;
+
     letter-spacing: 2px;
   }
 
+
+  /* カテゴリ */
+
   .category-buttons {
     gap: 8px;
+
     margin-bottom: 28px;
   }
 
   .category-buttons button {
     padding: 8px 13px;
+
     font-size: 11px;
   }
 
+
+  /* 写真 */
+
   .gallery-grid {
     grid-template-columns: 1fr;
+
     gap: 16px;
+  }
+
+  .photo-card {
+    border-radius: 12px;
   }
 
   .photo-info {
@@ -698,10 +863,34 @@ footer {
   }
 
   .photo-info h3 {
+    margin-bottom: 6px;
+
     font-size: 16px;
   }
 
   .photo-info p {
     font-size: 12px;
   }
+
+
+  /* -------------------------
+     MODAL
+  ------------------------- */
+
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    max-height: 72vh;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 16px;
+
+    font-size: 38px;
+  }
+
 }
